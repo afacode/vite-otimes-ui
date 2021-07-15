@@ -1,20 +1,12 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <o-button></o-button>
+  <o-button @click="c"  :disabled="true" :loading="true">111</o-button>
+  <o-button @click="c" type="primary">222</o-button>
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
 import HelloWorld from './components/HelloWorld.vue'
-
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-})
+const c = (event: MouseEvent) => {
+  console.log(event)
+}
 </script>
-
-<style>
-</style>

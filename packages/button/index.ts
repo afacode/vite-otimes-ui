@@ -1,8 +1,7 @@
 import Button from './src/button.vue'
 
-// Button.install = function(app) {
-//   Vue.component('OButton', Button)
-
-// }
+Button.install = (app) => {
+  app.component(Button.name, Button)
+}
 
 export default Button
