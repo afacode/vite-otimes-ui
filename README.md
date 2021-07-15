@@ -25,3 +25,17 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 3. Open `src/main.ts` in VSCode
 4. Open the VSCode command palette
 5. Search and run "Select TypeScript version" -> "Use workspace version"
+
+```
+import { App } from 'vue'
+import type { SFCWithInstall } from '@element-plus/utils/types'
+import Affix from './src/index.vue'
+
+Affix.install = (app: App): void => {
+  app.component(Affix.name, Affix)
+}
+
+const _Affix: SFCWithInstall<typeof Affix> = Affix
+
+export default _Affix
+```
