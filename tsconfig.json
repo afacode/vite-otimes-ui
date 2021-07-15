@@ -8,7 +8,11 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "paths": {
+      "pkg": ["./packages"], 
+      "@": ["./src"], 
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "pkg/**/*.ts", "pkg/**/*.d.ts", "pkg/**/*.tsx", "pkg/**/*.vue"]
 }
