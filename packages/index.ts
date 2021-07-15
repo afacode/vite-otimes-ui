@@ -1,18 +1,26 @@
 import { assertBooleanLiteral } from '@babel/types';
-import Button from './button/src/button.vue'
+import OButton from './button/index'
 
 const components = [
-  Button
+  OButton
 ]
 
+const plugins = []
+
 const install = (app, opts = {}) => {
-  components.forEach(item => {
-    app.component(item.name, item)
+  components.forEach(component => {
+    app.component(component.name, component)
   })
+  plugins.forEach(plugin => {
+    app.use(plugin)
+  })
+}
+
+export {
+  OButton
 }
 
 export default {
   version: '0.0.1',
-  install,
-  Button
+  install
 }
