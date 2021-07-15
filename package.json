@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "docs:dev": "vitepress dev docs --port 3003",
+    "docs:build": "vitepress build docs"
   },
   "dependencies": {
     "vue": "^3.0.5"
@@ -17,6 +19,7 @@
     "sass": "^1.35.2",
     "typescript": "^4.3.2",
     "vite": "^2.4.2",
+    "vitepress": "^0.15.6",
     "vue-tsc": "^0.0.24"
   }
 }
