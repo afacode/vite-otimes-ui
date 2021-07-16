@@ -6,10 +6,12 @@
     "serve": "vite preview",
     "docs:dev": "vitepress dev docs --port 3003",
     "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
     "template": "bash ./script/gc.sh"
   },
   "dependencies": {
-    "vue": "^3.0.5"
+    "vue": "^3.0.5",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@types/node": "^16.3.2",

@@ -6,21 +6,41 @@ module.exports = {
     [
       'link',
       {
-          rel: 'icon',
-          href: '/favicon.ico',//图片放在public文件夹下
+        rel: 'icon',
+        href: '/favicon.ico', //图片放在public文件夹下
       },
     ],
   ],
   // 主题配置
   themeConfig: {
     //   头部导航
-    nav: [
-        { text: '首页', link: '/' },
-        { text: '关于', link: '/about/' },
+    nav: [{
+        text: '首页',
+        link: '/'
+      },
+      {
+        text: '关于',
+        link: '/'
+      },
+      {
+        text: '源码',
+        link: '/'
+      },
     ],
     //   侧边导航
-    sidebar: [
-        { text: '我的', link: '/mine/' }
+    sidebar: [{
+        text: 'Button',
+        link: '/button/',
+        sidebarDepth: 1,
+      },
+      {
+        text: 'Alert',
+        link: '/alert/',
+        sidebarDepth: 1,
+      },
     ]
+  },
+  markdown: {
+    lineNumbers: true
   }
 }
