@@ -27,14 +27,15 @@ NAME=$NORMALIZED_NAME
 
 mkdir -p "$DIRNAME"
 mkdir -p "$DIRNAME/src"
-mkdir -p "$DIRNAME/__tests__"
+# mkdir -p "$DIRNAME/__tests__"
 
-cat > $DIRNAME/src/index.vue <<EOF
+cat > $DIRNAME/src/$INPUT_NAME.vue <<EOF
 <template>
   <div>
     <slot></slot>
   </div>
 </template>
+
 <script lang='ts'>
 import { defineComponent } from 'vue'
 export default defineComponent({
@@ -45,50 +46,51 @@ export default defineComponent({
   },
 })
 </script>
-<style>
+
+<style lang="scss" scoped>
 </style>
 EOF
 
 cat <<EOF >"$DIRNAME/index.ts"
 import { App } from 'vue'
-import ${NAME} from './src/index.vue'
+import O${NAME} from './src/$INPUT_NAME.vue'
 
-${NAME}.install = (app: App): void => {
-  app.component(${NAME}.name, ${NAME})
+O${NAME}.install = (app: App): void => {
+  app.component(O${NAME}.name, O${NAME})
 }
 
-export default ${NAME}
+export default O${NAME}
 EOF
 
-cat > $DIRNAME/package.json <<EOF
-{
-  "name": "@otimes-ui/$INPUT_NAME",
-  "version": "0.0.0",
-  "main": "dist/index.js",
-  "license": "MIT",
-  "peerDependencies": {
-    "vue": "3.1.1"
-  },
-  "devDependencies": {
-    "@vue/test-utils": "^2.0.0-beta.3"
-  }
-}
-EOF
+# cat > $DIRNAME/package.json <<EOF
+# {
+#   "name": "@otimes-ui/$INPUT_NAME",
+#   "version": "0.0.0",
+#   "main": "dist/index.js",
+#   "license": "MIT",
+#   "peerDependencies": {
+#     "vue": "3.1.1"
+#   },
+#   "devDependencies": {
+#     "@vue/test-utils": "^2.0.0-beta.3"
+#   }
+# }
+# EOF
 
-cat > $DIRNAME/__tests__/$INPUT_NAME.spec.ts <<EOF
-import { mount } from '@vue/test-utils'
-import $NAME from '../src/index.vue'
+# cat > $DIRNAME/__tests__/$INPUT_NAME.spec.ts <<EOF
+# import { mount } from '@vue/test-utils'
+# import $NAME from '../src/index.vue'
 
-const AXIOM = 'Rem is the best girl'
+# const AXIOM = 'Rem is the best girl'
 
-describe('$NAME.vue', () => {
-  test('render test', () => {
-    const wrapper = mount($NAME, {
-      slots: {
-        default: AXIOM,
-      },
-    })
-    expect(wrapper.text()).toEqual(AXIOM)
-  })
-})
-EOF
+# describe('$NAME.vue', () => {
+#   test('render test', () => {
+#     const wrapper = mount($NAME, {
+#       slots: {
+#         default: AXIOM,
+#       },
+#     })
+#     expect(wrapper.text()).toEqual(AXIOM)
+#   })
+# })
+# EOF

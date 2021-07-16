@@ -5,7 +5,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "docs:dev": "vitepress dev docs --port 3003",
-    "docs:build": "vitepress build docs"
+    "docs:build": "vitepress build docs",
+    "template": "bash ./script/gc.sh"
   },
   "dependencies": {
     "vue": "^3.0.5"
