@@ -5019,6 +5019,23 @@ os-browserify@^0.3.0:
   resolved "https://registry.npmjs.org/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
   integrity sha1-hUNzx/XCMVkU/Jv8a9gjj92h7Cc=
 
+otimes-ui@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/otimes-ui/-/otimes-ui-0.0.1.tgz#65a4eeff8be27db1738eeae652b8d540b909a819"
+  integrity sha512-OCqYgEATJ9327OPmvH0IglU13m8LbwTiW5dot5oWDpZWAc7QUzqn+rNiBSGh0C4aDZFcqwfNd0sx+0Hc4defMw==
+  dependencies:
+    vue "^3.0.5"
+    vuex "^4.0.2"
+
+otimes-ui@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npmjs.org/otimes-ui/-/otimes-ui-0.0.2.tgz#1a91f1f4613061de43b3da7208713c75549a8bf8"
+  integrity sha512-4D2wSdKZUvrq8KGnE7FPEzc7jVGjhNl4kzgvxVthCEC02UqNvnlY3JjNeoO3vIsP5j2PllhJZBv5HwqhlDA50g==
+  dependencies:
+    otimes-ui "^0.0.1"
+    vue "^3.0.5"
+    vuex "^4.0.2"
+
 p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"

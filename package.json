@@ -1,8 +1,10 @@
 {
   "name": "otimes-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/otimes-ui.umd.js",
   "module": "./dist/otimes-ui.es.js",
   "exports": {
@@ -22,6 +24,7 @@
     "lib": "vite build"
   },
   "dependencies": {
+    "otimes-ui": "^0.0.2",
     "vue": "^3.0.5",
     "vuex": "^4.0.2"
   },
