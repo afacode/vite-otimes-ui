@@ -1,6 +1,31 @@
-# Vue 3 + Typescript + Vite
+# OTimes-UI
+> Vue 3 + Typescript + Vite
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+一个UI组件库的练习，样式基于ELement-plus
+
+## 安装 install
+```
+yarn add otimes-ui
+或者
+npm install otimes-ui -S
+```
+
+## 使用 use
+> 完整引入
+在 main.js 中写入以下内容
+```
+import OTimesUI from 'otimes-ui'
+
+app.use(OTimesUI)
+```
+> vite 按需引入
+在 main.js 中写入以下内容
+```
+import {OButton} from 'otimes-ui'
+
+app.use(OButton)
+```
+
 
 ## Recommended IDE Setup
 
