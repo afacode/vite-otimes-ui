@@ -1,6 +1,7 @@
 {
   "name": "otimes-ui",
   "version": "0.0.1",
+  "private": false,
   "files": ["dist"],
   "main": "./dist/otimes-ui.umd.js",
   "module": "./dist/otimes-ui.es.js",
@@ -35,5 +36,9 @@
     "vite": "^2.4.2",
     "vitepress": "^0.15.6",
     "vue-tsc": "^0.0.24"
+  },
+  "author": {
+    "name": "afacode",
+    "email": "afacode@outlook.com"
   }
 }
