@@ -15,5 +15,11 @@ export default defineConfig({
       'sty': resolve(__dirname, 'styles'),
       'pkg': resolve(__dirname, 'packages')
     }
+  },
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'packages/index.ts'),
+      name: 'otimes-ui'
+    }
   }
 })

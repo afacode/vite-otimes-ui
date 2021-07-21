@@ -1,4 +1,4 @@
-import { assertBooleanLiteral } from '@babel/types';
+import './styles/index.scss'
 import OButton from './button/index'
 
 const components = [
@@ -16,6 +16,9 @@ const install = (app, opts = {}) => {
   })
 }
 
+// if (typeof window !== 'undefined' && window.app) {
+//   install(window.app);
+// }
 export {
   OButton
 }

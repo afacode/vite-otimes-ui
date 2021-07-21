@@ -1,5 +1,16 @@
 {
-  "version": "0.0.0",
+  "name": "otimes-ui",
+  "version": "0.0.1",
+  "files": ["dist"],
+  "main": "dist/lib/otimes.umd.js",
+  "module": "dist/otimes.es.js",
+  "style": "dist/style.css",
+  "exports": {
+    ".": {
+      "import": "dist/otimes-ui.es.js",
+      "require": "dist/otimes-ui.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -7,7 +18,8 @@
     "docs:dev": "vitepress dev docs --port 3003",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
-    "template": "bash ./script/gc.sh"
+    "template": "bash ./script/gc.sh",
+    "lib": "vite build"
   },
   "dependencies": {
     "vue": "^3.0.5",
